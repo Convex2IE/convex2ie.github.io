@@ -1,0 +1,1931 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
+    
+    
+      
+        <title>FusionSphere Openstack R6.1 Organization vdc - Convex's Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#fusionsphere-openstack-r61-organization-vdc" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Convex's Blog" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Convex's Blog
+            </span>
+            <span class="md-header-nav__topic">
+              FusionSphere Openstack R6.1 Organization vdc
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Convex's Blog" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Convex's Blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Openstack
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Openstack
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Openstack/Networking (neutron) concepts/" title="Networking (neutron) concepts" class="md-nav__link">
+      Networking (neutron) concepts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Openstack/Openstack Keystone/" title="Openstack Keystone" class="md-nav__link">
+      Openstack Keystone
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Openstack/Identity service overview/" title="Identity service overview" class="md-nav__link">
+      Identity service overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../namespaces/" title="Namespaces" class="md-nav__link">
+      Namespaces
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Openstack/Cinder Installation Tutorial for Ubuntu/" title="Cinder Installation Tutorial for Ubuntu" class="md-nav__link">
+      Cinder Installation Tutorial for Ubuntu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Openstack/Cinder Installation Tutorial/" title="Cinder Installation Tutorial" class="md-nav__link">
+      Cinder Installation Tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Openstack/Components/" title="Components" class="md-nav__link">
+      Components
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Openstack/Introduction to Object Storage/" title="Introduction to Object Storage" class="md-nav__link">
+      Introduction to Object Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Openstack/Keystone_Token/" title="Keystone Token" class="md-nav__link">
+      Keystone Token
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Openstack/Networking service overview/" title="Networking service overview" class="md-nav__link">
+      Networking service overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Openstack/Openstack Image Service/" title="Openstack Image Service" class="md-nav__link">
+      Openstack Image Service
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Openstack/Openstack_Block Storage/" title="Openstack Block Storage" class="md-nav__link">
+      Openstack Block Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Openstack/Openstack_Log/" title="Openstack_Log" class="md-nav__link">
+      Openstack_Log
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Openstack/Openstack_ML2 Core Plugin/" title="Openstack ML2 Core Plugin" class="md-nav__link">
+      Openstack ML2 Core Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Openstack/Openstack_Neutron Server/" title="Openstack Neutron Server" class="md-nav__link">
+      Openstack Neutron Server
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Openstack/Openstack_Neutron_Concept/" title="Openstack Neutron Concept" class="md-nav__link">
+      Openstack Neutron Concept
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Openstack/Openstack_Neutron_T/" title="Openstack Neutron T" class="md-nav__link">
+      Openstack Neutron T
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Openstack/Openstack_Policy.json/" title="Openstack_Policy.json" class="md-nav__link">
+      Openstack_Policy.json
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Openstack/Openstack_Tenant_to_Resource/" title="Openstack Tenant to Resource" class="md-nav__link">
+      Openstack Tenant to Resource
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Openstack/json/" title="Json" class="md-nav__link">
+      Json
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      AI
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        AI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../AI/DeepinMind/" title="DeepinMind" class="md-nav__link">
+      DeepinMind
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../AI/neuron/" title="Neuron" class="md-nav__link">
+      Neuron
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Daily
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Daily
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      2017
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        2017
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Daily/2017/0831/" title="0831" class="md-nav__link">
+      0831
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Daily/2017/0904/" title="0904" class="md-nav__link">
+      0904
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Daily/2017/0905/" title="0905" class="md-nav__link">
+      0905
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      2018
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        2018
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Daily/2018/KVM嵌套虚拟化/" title="KVM嵌套虚拟化" class="md-nav__link">
+      KVM嵌套虚拟化
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Daily/2018/Linux图形界面/" title="Linux图形界面" class="md-nav__link">
+      Linux图形界面
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Daily/2018/firewalld/" title="Firewalld" class="md-nav__link">
+      Firewalld
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Daily/2018/gnome文件管理器修改/" title="Gnome文件管理器修改" class="md-nav__link">
+      Gnome文件管理器修改
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Daily/2018/uefi+gpt+grub+lvm/" title="Uefi+gpt+grub+lvm" class="md-nav__link">
+      Uefi+gpt+grub+lvm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Daily/2018/virt-manager自动调整VM窗口大小/" title="virt manager自动调整VM窗口大小" class="md-nav__link">
+      virt manager自动调整VM窗口大小
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      2019
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        2019
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-1" type="checkbox" id="nav-4-3-1">
+    
+    <label class="md-nav__link" for="nav-4-3-1">
+      1
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-1">
+        1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Daily/2019/01/mariadb_character/" title="Mariadb character" class="md-nav__link">
+      Mariadb character
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Daily/2019/01/pip install mysqlclient error /" title="Pip install mysqlclient error " class="md-nav__link">
+      Pip install mysqlclient error 
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-2" type="checkbox" id="nav-4-3-2">
+    
+    <label class="md-nav__link" for="nav-4-3-2">
+      2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-2">
+        2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Daily/2019/02/curl build openstackRESTAPI/" title="curl build openstackRESTAPI" class="md-nav__link">
+      curl build openstackRESTAPI
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-3" type="checkbox" id="nav-4-3-3">
+    
+    <label class="md-nav__link" for="nav-4-3-3">
+      3
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-3">
+        3
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Daily/2019/03/Event-driven programming/" title="Event driven programming" class="md-nav__link">
+      Event driven programming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Daily/2019/03/Openvswitch/" title="Openvswitch" class="md-nav__link">
+      Openvswitch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Daily/2019/03/Portable Operating System Interface/" title="Portable Operating System Interface" class="md-nav__link">
+      Portable Operating System Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Daily/2019/03/RUID & EUID & SUID/" title="RUID & EUID & SUID" class="md-nav__link">
+      RUID & EUID & SUID
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Daily/2019/03/nginx/" title="Nginx" class="md-nav__link">
+      Nginx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Daily/2019/03/ps/" title="Ps" class="md-nav__link">
+      Ps
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Docker
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Docker
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/Base/" title="Base" class="md-nav__link">
+      Base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/Dockerfile/" title="Dockerfile" class="md-nav__link">
+      Dockerfile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/bridge/" title="Bridge" class="md-nav__link">
+      Bridge
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/dockerfile cmd/" title="Dockerfile cmd" class="md-nav__link">
+      Dockerfile cmd
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Docker/namespaces/" title="Namespaces" class="md-nav__link">
+      Namespaces
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Manual
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Manual
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Manual/cgroup/" title="Cgroup" class="md-nav__link">
+      Cgroup
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Math
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Math
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Math/基础概念/" title="基础概念" class="md-nav__link">
+      基础概念
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Math/微积分/" title="微积分" class="md-nav__link">
+      微积分
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Math/数系/" title="数系" class="md-nav__link">
+      数系
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Math/求解线性方程组/" title="求解线性方程组" class="md-nav__link">
+      求解线性方程组
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Math/线性代数/" title="线性代数" class="md-nav__link">
+      线性代数
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+    
+    <label class="md-nav__link" for="nav-8">
+      Other
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Other
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../8_10b/" title="8 10b" class="md-nav__link">
+      8 10b
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Bash/" title="Bash" class="md-nav__link">
+      Bash
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CA Authentication/" title="CA Authentication" class="md-nav__link">
+      CA Authentication
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CNA_disk/" title="CNA disk" class="md-nav__link">
+      CNA disk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Cinder-log/" title="Cinder log" class="md-nav__link">
+      Cinder log
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Example/" title="Heading" class="md-nav__link">
+      Heading
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FibreChannel/" title="FibreChannel" class="md-nav__link">
+      FibreChannel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FusionAccessTerm/" title="FusionAccessTerm" class="md-nav__link">
+      FusionAccessTerm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        FusionSphere Openstack R6.1 Organization vdc
+      </label>
+    
+    <a href="./" title="FusionSphere Openstack R6.1 Organization vdc" class="md-nav__link md-nav__link--active">
+      FusionSphere Openstack R6.1 Organization vdc
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fusionsphere-openstack-r61-organization-vdc" title="FusionSphere Openstack R6.1 Organization vdc" class="md-nav__link">
+    FusionSphere Openstack R6.1 Organization vdc
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#organizationdomainnameie_orgid3c91bd9abf314350b98bab6edc47aae1" title="查找出一个与Organization同名的domain,name:IE_ORG,id:3c91bd9abf314350b98bab6edc47aae1" class="md-nav__link">
+    查找出一个与Organization同名的domain,name:IE_ORG,id:3c91bd9abf314350b98bab6edc47aae1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vdcprojectnameie_vdcidbc32fb3eaa9c4ce287081bdf6211abc6" title="查找出一个与VDC同名的Project,name:IE_VDC,id:bc32fb3eaa9c4ce287081bdf6211abc6" class="md-nav__link">
+    查找出一个与VDC同名的Project,name:IE_VDC,id:bc32fb3eaa9c4ce287081bdf6211abc6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projectgroupgroupae74d5c94afd45c1940fa61d4e5e1fc93e3b95eaf2bf45efadd5f1585e4007d31fe338d00c3741cea4ec79fd8b44e2f6" title="查看project的角色分配，发现都是以group的方式进行权限分配，group分别有：ae74d5c94afd45c1940fa61d4e5e1fc9、3e3b95eaf2bf45efadd5f1585e4007d3、1fe338d00c3741cea4ec79fd8b44e2f6" class="md-nav__link">
+    查看project的角色分配，发现都是以group的方式进行权限分配，group分别有：ae74d5c94afd45c1940fa61d4e5e1fc9、3e3b95eaf2bf45efadd5f1585e4007d3、1fe338d00c3741cea4ec79fd8b44e2f6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#groupprojectidserviceie_vdcprojectid_ownervdcprojectid_vdc_ownervdc" title="分别查看这样组，发现上述三个group的名字都以project的id开头，分别对应service、IE_VDC，猜测projectid_owner为vdc业务员，projectid_vdc_owner为vdc管理员" class="md-nav__link">
+    分别查看这样组，发现上述三个group的名字都以project的id开头，分别对应service、IE_VDC，猜测projectid_owner为vdc业务员，projectid_vdc_owner为vdc管理员
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usergroup" title="根据user与group的对应关系，证明上述猜想" class="md-nav__link">
+    根据user与group的对应关系，证明上述猜想
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rolename" title="查看role，从name同样证明" class="md-nav__link">
+    查看role，从name同样证明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Keystone_Token/" title="Keystone_Token" class="md-nav__link">
+      Keystone_Token
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Linux_NetworkDevice/" title="Linux NetworkDevice" class="md-nav__link">
+      Linux NetworkDevice
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MIME/" title="MIME类型" class="md-nav__link">
+      MIME类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Object Storage characteristics/" title="Object Storage characteristics" class="md-nav__link">
+      Object Storage characteristics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Regular Expression/" title="Regular Expression" class="md-nav__link">
+      Regular Expression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../awk/" title="Awk" class="md-nav__link">
+      Awk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../disable automount/" title="Disable automount" class="md-nav__link">
+      Disable automount
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../iptables/" title="Iptables" class="md-nav__link">
+      Iptables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../json/" title="Json" class="md-nav__link">
+      Json
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tcpdump/" title="Tcpdump" class="md-nav__link">
+      Tcpdump
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/Untitled/" title="Untitled" class="md-nav__link">
+      Untitled
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/generator/" title="Generator" class="md-nav__link">
+      Generator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/lambda/" title="Lambda" class="md-nav__link">
+      Lambda
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/Django/models/" title="Models" class="md-nav__link">
+      Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/Django/urlpatterns/" title="Urlpatterns" class="md-nav__link">
+      Urlpatterns
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/issue/一次方法的错误使用/" title="一次方法的错误使用" class="md-nav__link">
+      一次方法的错误使用
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/issue/字符串sort无返回值/" title="字符串sort无返回值" class="md-nav__link">
+      字符串sort无返回值
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python基础教程/第一章/" title="第一章" class="md-nav__link">
+      第一章
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python基础教程/第七章 类与对象/" title="第七章 类与对象" class="md-nav__link">
+      第七章 类与对象
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python基础教程/第三章 使用字符串/" title="第三章 使用字符串" class="md-nav__link">
+      第三章 使用字符串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python基础教程/第九章/" title="第九章" class="md-nav__link">
+      第九章
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python基础教程/第二章 列表和元组/" title="第二章 列表和元组" class="md-nav__link">
+      第二章 列表和元组
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python基础教程/第五章 条件、循环及其他语问/" title="第五章 条件、循环及其他语问" class="md-nav__link">
+      第五章 条件、循环及其他语问
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python基础教程/第八章 异常/" title="第八章 异常" class="md-nav__link">
+      第八章 异常
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python基础教程/第六章 函数/" title="第六章 函数" class="md-nav__link">
+      第六章 函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python基础教程/第四章 字典/" title="第四章 字典" class="md-nav__link">
+      第四章 字典
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fusionsphere-openstack-r61-organization-vdc" title="FusionSphere Openstack R6.1 Organization vdc" class="md-nav__link">
+    FusionSphere Openstack R6.1 Organization vdc
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#organizationdomainnameie_orgid3c91bd9abf314350b98bab6edc47aae1" title="查找出一个与Organization同名的domain,name:IE_ORG,id:3c91bd9abf314350b98bab6edc47aae1" class="md-nav__link">
+    查找出一个与Organization同名的domain,name:IE_ORG,id:3c91bd9abf314350b98bab6edc47aae1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vdcprojectnameie_vdcidbc32fb3eaa9c4ce287081bdf6211abc6" title="查找出一个与VDC同名的Project,name:IE_VDC,id:bc32fb3eaa9c4ce287081bdf6211abc6" class="md-nav__link">
+    查找出一个与VDC同名的Project,name:IE_VDC,id:bc32fb3eaa9c4ce287081bdf6211abc6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projectgroupgroupae74d5c94afd45c1940fa61d4e5e1fc93e3b95eaf2bf45efadd5f1585e4007d31fe338d00c3741cea4ec79fd8b44e2f6" title="查看project的角色分配，发现都是以group的方式进行权限分配，group分别有：ae74d5c94afd45c1940fa61d4e5e1fc9、3e3b95eaf2bf45efadd5f1585e4007d3、1fe338d00c3741cea4ec79fd8b44e2f6" class="md-nav__link">
+    查看project的角色分配，发现都是以group的方式进行权限分配，group分别有：ae74d5c94afd45c1940fa61d4e5e1fc9、3e3b95eaf2bf45efadd5f1585e4007d3、1fe338d00c3741cea4ec79fd8b44e2f6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#groupprojectidserviceie_vdcprojectid_ownervdcprojectid_vdc_ownervdc" title="分别查看这样组，发现上述三个group的名字都以project的id开头，分别对应service、IE_VDC，猜测projectid_owner为vdc业务员，projectid_vdc_owner为vdc管理员" class="md-nav__link">
+    分别查看这样组，发现上述三个group的名字都以project的id开头，分别对应service、IE_VDC，猜测projectid_owner为vdc业务员，projectid_vdc_owner为vdc管理员
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usergroup" title="根据user与group的对应关系，证明上述猜想" class="md-nav__link">
+    根据user与group的对应关系，证明上述猜想
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rolename" title="查看role，从name同样证明" class="md-nav__link">
+    查看role，从name同样证明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>FusionSphere Openstack R6.1 Organization vdc</h1>
+                
+                <h2 id="fusionsphere-openstack-r61-organization-vdc">FusionSphere Openstack R6.1 Organization vdc</h2>
+<pre><code>CPS03:~ # openstack domain list
++----------------------------------+-------------------+---------+-------------+
+| ID                               | Name              | Enabled | Description |
++----------------------------------+-------------------+---------+-------------+
+| 3e0d192baafc41c5a0ce86e67df77a08 | heat_stack_domain | True    |             |
+| default                          | Default           | True    |             |
+| 3c91bd9abf314350b98bab6edc47aae1 | IE_ORG            | True    |             |
++----------------------------------+-------------------+---------+-------------+
+</code></pre>
+
+<h5 id="organizationdomainnameie_orgid3c91bd9abf314350b98bab6edc47aae1">查找出一个与Organization同名的domain,name:IE_ORG,id:3c91bd9abf314350b98bab6edc47aae1</h5>
+<pre><code>CPS03:~ # openstack project list
++----------------------------------+----------------+
+| ID                               | Name           |
++----------------------------------+----------------+
+| d6975fe53cf2440e8db894d41ff53bdb | service        |
+| bf9ad240ae474574b82d8eda1ed4c1ba | elb            |
+| f98047b1124f471d8d4347ab7282250f | router         |
+| f10e0e996c4641d6b4fd3e5fe3293911 | admin          |
+| 3b3915ad4d644dec84c986891e8e3a6d | dc_test_dc1    |
+| bf9111ed98994c67a17f18d76c6378ba | dc_system_dc1  |
+| aa059c5f8218418aae9fc59ddee4e835 | dc_network_dc1 |
+| bc32fb3eaa9c4ce287081bdf6211abc6 | IE_VDC         |
++----------------------------------+----------------+
+</code></pre>
+
+<h5 id="vdcprojectnameie_vdcidbc32fb3eaa9c4ce287081bdf6211abc6">查找出一个与VDC同名的Project,name:IE_VDC,id:bc32fb3eaa9c4ce287081bdf6211abc6</h5>
+<pre><code>CPS03:~ # openstack role assignment list --project bc32fb3eaa9c4ce287081bdf6211abc6
++----------------------------------+------+----------------------------------+----------------------------------+--------+-----------+
+| Role                             | User | Group                            | Project                          | Domain | Inherited |
++----------------------------------+------+----------------------------------+----------------------------------+--------+-----------+
+| 9ef560a9fe6240a6a6b0e67e6b6639c5 |      | ae74d5c94afd45c1940fa61d4e5e1fc9 | bc32fb3eaa9c4ce287081bdf6211abc6 |        | False     |
+| cd0ee9c16a7f42d9988af0720503df5c |      | 3e3b95eaf2bf45efadd5f1585e4007d3 | bc32fb3eaa9c4ce287081bdf6211abc6 |        | False     |
+| 8032e7fbb37e46e286d204f2b64ef689 |      | ae74d5c94afd45c1940fa61d4e5e1fc9 | bc32fb3eaa9c4ce287081bdf6211abc6 |        | False     |
+| 8032e7fbb37e46e286d204f2b64ef689 |      | 1fe338d00c3741cea4ec79fd8b44e2f6 | bc32fb3eaa9c4ce287081bdf6211abc6 |        | False     |
++----------------------------------+------+----------------------------------+----------------------------------+--------+-----------+
+</code></pre>
+
+<h5 id="projectgroupgroupae74d5c94afd45c1940fa61d4e5e1fc93e3b95eaf2bf45efadd5f1585e4007d31fe338d00c3741cea4ec79fd8b44e2f6">查看project的角色分配，发现都是以group的方式进行权限分配，group分别有：ae74d5c94afd45c1940fa61d4e5e1fc9、3e3b95eaf2bf45efadd5f1585e4007d3、1fe338d00c3741cea4ec79fd8b44e2f6</h5>
+<pre><code>CPS03:~ # openstack group list
++----------------------------------+------------------------------------------------+
+| ID                               | Name                                           |
++----------------------------------+------------------------------------------------+
+| 5ec63d4c0e4947d6a55505579709be7f | orchestration_group                            |
+| 01036def928a46f792e5632fdf8b5875 | service_group                                  |
+| cc05d6e0aed141a6920100a61abbd93f | f10e0e996c4641d6b4fd3e5fe3293911_admin         |
+| ae74d5c94afd45c1940fa61d4e5e1fc9 | d6975fe53cf2440e8db894d41ff53bdb_admin         |
+| f6e2b4a6789048f0aa4e0684616483a9 | d6975fe53cf2440e8db894d41ff53bdb_limited_owner |
+| 3e3b95eaf2bf45efadd5f1585e4007d3 | bc32fb3eaa9c4ce287081bdf6211abc6_owner         |
+| 1fe338d00c3741cea4ec79fd8b44e2f6 | bc32fb3eaa9c4ce287081bdf6211abc6_vdc_owner     |
++----------------------------------+------------------------------------------------+
+
+</code></pre>
+
+<h5 id="groupprojectidserviceie_vdcprojectid_ownervdcprojectid_vdc_ownervdc">分别查看这样组，发现上述三个group的名字都以project的id开头，分别对应service、IE_VDC，猜测projectid_owner为vdc业务员，projectid_vdc_owner为vdc管理员</h5>
+<pre><code>KEYSTONE=# select * from USER_GROUP_MEMBERSHIP;
+             USER_ID              |             GROUP_ID             
+----------------------------------+----------------------------------
+ 6677cbe8892a4122aa3b125ad0bb8e6f | cc05d6e0aed141a6920100a61abbd93f
+ 1637343727e14f88af2b788c95b25a14 | 3e3b95eaf2bf45efadd5f1585e4007d3
+ e7b25d819c20425c81b4233f4bfd7413 | 1fe338d00c3741cea4ec79fd8b44e2f6
+(3 rows)
+
+</code></pre>
+
+<pre><code>CPS03:~ # openstack user list
++----------------------------------+----------------------+
+| ID                               | Name                 |
++----------------------------------+----------------------+
+| 49779c9693d5432ab1bd6dec811b0249 | keystone             |
+| 5eb4514cfe6f418b92d600dcab3e6d74 | s3                   |
+| c5411c98b37942e59e4816730f76ef45 | portal               |
+| 5f5708fa4b314e40906d9943a470aa5d | fsp4fsm              |
+| 12ce6b348f5e46ada1d8c5da9ed1cac7 | ironic               |
+| 6ba6b0e12f0f48538363c799fad80bd1 | internal_cloud_admin |
+| cc70fc23d239436f9ee25f5f8e2838df | cps                  |
+| 1dfa112ae3a14a9da2706e3653fc1913 | neutron              |
+| 4423f632fcbf4204b6d4d29726e3e4d9 | ceilometer           |
+| 3c3eb1c4f4d248d584e09d639576577d | nova                 |
+| 6677cbe8892a4122aa3b125ad0bb8e6f | cloud_admin          |
+| 18e79082ed9e4c6394de5bd8fdb887e3 | dc1_admin            |
+| 366c0528205345cc9f6c477fdd35ca00 | cinder               |
+| f5cb5c5da5764ed2ad362ffc64bc9a4e | heat                 |
+| 90aa6c0737964edc9b33528a4e786926 | stack_domain_admin   |
+| b5f8e2ca774644418ff6b6ecf25610f8 | glance               |
+| 8f5f846d712c4d4bae45bdb673a154fa | swift                |
+| 23579ca4e06a49f396fe3c3fad1f951d | fsp4fm               |
+| cd385e9f18c14e84bbc1367d666efaed | system_admin         |
+| e7b25d819c20425c81b4233f4bfd7413 | vdc01_admin01        |
+| 1637343727e14f88af2b788c95b25a14 | vdc01_user01         |
++----------------------------------+----------------------+
+</code></pre>
+
+<h5 id="usergroup">根据user与group的对应关系，证明上述猜想</h5>
+<pre><code>CPS03:~ # openstack role list
++----------------------------------+-----------------+
+| ID                               | Name            |
++----------------------------------+-----------------+
+| 9ef560a9fe6240a6a6b0e67e6b6639c5 | admin           |
+| e60ac8aed4be465d9b631888a2848eab | internal_admin  |
+| cd0ee9c16a7f42d9988af0720503df5c | owner           |
+| 825a819af90447b79df41ec302092461 | limited_owner   |
+| 8032e7fbb37e46e286d204f2b64ef689 | vdc_owner       |
+| 2ec4fd9c47024943a44054fb82555cf9 | heat_stack_user |
+| a82e9be7bd184479b4cdb823d950cada | nfv_owner       |
++----------------------------------+-----------------+
+
+</code></pre>
+
+<h5 id="rolename">查看role，从name同样证明</h5>
+<pre><code>CPS03:~ # openstack role assignment list --domain 3c91bd9abf314350b98bab6edc47aae1
++----------------------------------+------+----------------------------------+---------+----------------------------------+-----------+
+| Role                             | User | Group                            | Project | Domain                           | Inherited |
++----------------------------------+------+----------------------------------+---------+----------------------------------+-----------+
+| 825a819af90447b79df41ec302092461 |      | f6e2b4a6789048f0aa4e0684616483a9 |         | 3c91bd9abf314350b98bab6edc47aae1 | False     |
+| cd0ee9c16a7f42d9988af0720503df5c |      | 3e3b95eaf2bf45efadd5f1585e4007d3 |         | 3c91bd9abf314350b98bab6edc47aae1 | False     |
+| 8032e7fbb37e46e286d204f2b64ef689 |      | 1fe338d00c3741cea4ec79fd8b44e2f6 |         | 3c91bd9abf314350b98bab6edc47aae1 | False     |
+| 9ef560a9fe6240a6a6b0e67e6b6639c5 |      | ae74d5c94afd45c1940fa61d4e5e1fc9 |         | 3c91bd9abf314350b98bab6edc47aae1 | False     |
+| 8032e7fbb37e46e286d204f2b64ef689 |      | ae74d5c94afd45c1940fa61d4e5e1fc9 |         | 3c91bd9abf314350b98bab6edc47aae1 | False     |
++----------------------------------+------+----------------------------------+---------+----------------------------------+-----------+
+
+</code></pre>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../FusionAccessTerm/" title="FusionAccessTerm" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                FusionAccessTerm
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Keystone_Token/" title="Keystone_Token" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Keystone_Token
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.d9aa80ab.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

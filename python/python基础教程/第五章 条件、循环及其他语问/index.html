@@ -1,0 +1,2503 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
+    
+    
+      
+        <title>第五章 条件、循环及其他语问 - Convex's Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.982221ab.css">
+      
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#print-import" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="Convex's Blog" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Convex's Blog
+            </span>
+            <span class="md-header-nav__topic">
+              第五章 条件、循环及其他语问
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../.." title="Convex's Blog" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Convex's Blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Openstack
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Openstack
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Openstack/Networking (neutron) concepts/" title="Networking (neutron) concepts" class="md-nav__link">
+      Networking (neutron) concepts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Openstack/Openstack Keystone/" title="Openstack Keystone" class="md-nav__link">
+      Openstack Keystone
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Openstack/Identity service overview/" title="Identity service overview" class="md-nav__link">
+      Identity service overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../namespaces/" title="Namespaces" class="md-nav__link">
+      Namespaces
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Openstack/Cinder Installation Tutorial for Ubuntu/" title="Cinder Installation Tutorial for Ubuntu" class="md-nav__link">
+      Cinder Installation Tutorial for Ubuntu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Openstack/Cinder Installation Tutorial/" title="Cinder Installation Tutorial" class="md-nav__link">
+      Cinder Installation Tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Openstack/Components/" title="Components" class="md-nav__link">
+      Components
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Openstack/Introduction to Object Storage/" title="Introduction to Object Storage" class="md-nav__link">
+      Introduction to Object Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Openstack/Keystone_Token/" title="Keystone Token" class="md-nav__link">
+      Keystone Token
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Openstack/Networking service overview/" title="Networking service overview" class="md-nav__link">
+      Networking service overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Openstack/Openstack Image Service/" title="Openstack Image Service" class="md-nav__link">
+      Openstack Image Service
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Openstack/Openstack_Block Storage/" title="Openstack Block Storage" class="md-nav__link">
+      Openstack Block Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Openstack/Openstack_Log/" title="Openstack_Log" class="md-nav__link">
+      Openstack_Log
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Openstack/Openstack_ML2 Core Plugin/" title="Openstack ML2 Core Plugin" class="md-nav__link">
+      Openstack ML2 Core Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Openstack/Openstack_Neutron Server/" title="Openstack Neutron Server" class="md-nav__link">
+      Openstack Neutron Server
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Openstack/Openstack_Neutron_Concept/" title="Openstack Neutron Concept" class="md-nav__link">
+      Openstack Neutron Concept
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Openstack/Openstack_Neutron_T/" title="Openstack Neutron T" class="md-nav__link">
+      Openstack Neutron T
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Openstack/Openstack_Policy.json/" title="Openstack_Policy.json" class="md-nav__link">
+      Openstack_Policy.json
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Openstack/Openstack_Tenant_to_Resource/" title="Openstack Tenant to Resource" class="md-nav__link">
+      Openstack Tenant to Resource
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Openstack/json/" title="Json" class="md-nav__link">
+      Json
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      AI
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        AI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../AI/DeepinMind/" title="DeepinMind" class="md-nav__link">
+      DeepinMind
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../AI/neuron/" title="Neuron" class="md-nav__link">
+      Neuron
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Daily
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Daily
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      2017
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        2017
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Daily/2017/0831/" title="0831" class="md-nav__link">
+      0831
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Daily/2017/0904/" title="0904" class="md-nav__link">
+      0904
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Daily/2017/0905/" title="0905" class="md-nav__link">
+      0905
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      2018
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        2018
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Daily/2018/KVM嵌套虚拟化/" title="KVM嵌套虚拟化" class="md-nav__link">
+      KVM嵌套虚拟化
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Daily/2018/Linux图形界面/" title="Linux图形界面" class="md-nav__link">
+      Linux图形界面
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Daily/2018/firewalld/" title="Firewalld" class="md-nav__link">
+      Firewalld
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Daily/2018/gnome文件管理器修改/" title="Gnome文件管理器修改" class="md-nav__link">
+      Gnome文件管理器修改
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Daily/2018/uefi+gpt+grub+lvm/" title="Uefi+gpt+grub+lvm" class="md-nav__link">
+      Uefi+gpt+grub+lvm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Daily/2018/virt-manager自动调整VM窗口大小/" title="virt manager自动调整VM窗口大小" class="md-nav__link">
+      virt manager自动调整VM窗口大小
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      2019
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        2019
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-1" type="checkbox" id="nav-4-3-1">
+    
+    <label class="md-nav__link" for="nav-4-3-1">
+      1
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-1">
+        1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Daily/2019/01/mariadb_character/" title="Mariadb character" class="md-nav__link">
+      Mariadb character
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Daily/2019/01/pip install mysqlclient error /" title="Pip install mysqlclient error " class="md-nav__link">
+      Pip install mysqlclient error 
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-2" type="checkbox" id="nav-4-3-2">
+    
+    <label class="md-nav__link" for="nav-4-3-2">
+      2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-2">
+        2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Daily/2019/02/curl build openstackRESTAPI/" title="curl build openstackRESTAPI" class="md-nav__link">
+      curl build openstackRESTAPI
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-3" type="checkbox" id="nav-4-3-3">
+    
+    <label class="md-nav__link" for="nav-4-3-3">
+      3
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-3">
+        3
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Daily/2019/03/Event-driven programming/" title="Event driven programming" class="md-nav__link">
+      Event driven programming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Daily/2019/03/Openvswitch/" title="Openvswitch" class="md-nav__link">
+      Openvswitch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Daily/2019/03/Portable Operating System Interface/" title="Portable Operating System Interface" class="md-nav__link">
+      Portable Operating System Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Daily/2019/03/RUID & EUID & SUID/" title="RUID & EUID & SUID" class="md-nav__link">
+      RUID & EUID & SUID
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Daily/2019/03/nginx/" title="Nginx" class="md-nav__link">
+      Nginx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Daily/2019/03/ps/" title="Ps" class="md-nav__link">
+      Ps
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Docker
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Docker
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Docker/Base/" title="Base" class="md-nav__link">
+      Base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Docker/Dockerfile/" title="Dockerfile" class="md-nav__link">
+      Dockerfile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Docker/bridge/" title="Bridge" class="md-nav__link">
+      Bridge
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Docker/dockerfile cmd/" title="Dockerfile cmd" class="md-nav__link">
+      Dockerfile cmd
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Docker/namespaces/" title="Namespaces" class="md-nav__link">
+      Namespaces
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Manual
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Manual
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Manual/cgroup/" title="Cgroup" class="md-nav__link">
+      Cgroup
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Math
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Math
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Math/基础概念/" title="基础概念" class="md-nav__link">
+      基础概念
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Math/微积分/" title="微积分" class="md-nav__link">
+      微积分
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Math/数系/" title="数系" class="md-nav__link">
+      数系
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Math/求解线性方程组/" title="求解线性方程组" class="md-nav__link">
+      求解线性方程组
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Math/线性代数/" title="线性代数" class="md-nav__link">
+      线性代数
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Other
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Other
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Other/8_10b/" title="8 10b" class="md-nav__link">
+      8 10b
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Other/Bash/" title="Bash" class="md-nav__link">
+      Bash
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Other/CA Authentication/" title="CA Authentication" class="md-nav__link">
+      CA Authentication
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Other/CNA_disk/" title="CNA disk" class="md-nav__link">
+      CNA disk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Other/Cinder-log/" title="Cinder log" class="md-nav__link">
+      Cinder log
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Other/Example/" title="Heading" class="md-nav__link">
+      Heading
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Other/FibreChannel/" title="FibreChannel" class="md-nav__link">
+      FibreChannel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Other/FusionAccessTerm/" title="FusionAccessTerm" class="md-nav__link">
+      FusionAccessTerm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Other/FusionSphere Openstack R6.1 Organization vdc/" title="FusionSphere Openstack R6.1 Organization vdc" class="md-nav__link">
+      FusionSphere Openstack R6.1 Organization vdc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Other/Keystone_Token/" title="Keystone_Token" class="md-nav__link">
+      Keystone_Token
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Other/Linux_NetworkDevice/" title="Linux NetworkDevice" class="md-nav__link">
+      Linux NetworkDevice
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Other/MIME/" title="MIME类型" class="md-nav__link">
+      MIME类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Other/Object Storage characteristics/" title="Object Storage characteristics" class="md-nav__link">
+      Object Storage characteristics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Other/Regular Expression/" title="Regular Expression" class="md-nav__link">
+      Regular Expression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Other/awk/" title="Awk" class="md-nav__link">
+      Awk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Other/disable automount/" title="Disable automount" class="md-nav__link">
+      Disable automount
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Other/iptables/" title="Iptables" class="md-nav__link">
+      Iptables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Other/json/" title="Json" class="md-nav__link">
+      Json
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Other/tcpdump/" title="Tcpdump" class="md-nav__link">
+      Tcpdump
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+    
+    <label class="md-nav__link" for="nav-9">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Untitled/" title="Untitled" class="md-nav__link">
+      Untitled
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../generator/" title="Generator" class="md-nav__link">
+      Generator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lambda/" title="Lambda" class="md-nav__link">
+      Lambda
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/models/" title="Models" class="md-nav__link">
+      Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Django/urlpatterns/" title="Urlpatterns" class="md-nav__link">
+      Urlpatterns
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../issue/一次方法的错误使用/" title="一次方法的错误使用" class="md-nav__link">
+      一次方法的错误使用
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../issue/字符串sort无返回值/" title="字符串sort无返回值" class="md-nav__link">
+      字符串sort无返回值
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../第一章/" title="第一章" class="md-nav__link">
+      第一章
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../第七章 类与对象/" title="第七章 类与对象" class="md-nav__link">
+      第七章 类与对象
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../第三章 使用字符串/" title="第三章 使用字符串" class="md-nav__link">
+      第三章 使用字符串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../第九章/" title="第九章" class="md-nav__link">
+      第九章
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../第二章 列表和元组/" title="第二章 列表和元组" class="md-nav__link">
+      第二章 列表和元组
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        第五章 条件、循环及其他语问
+      </label>
+    
+    <a href="./" title="第五章 条件、循环及其他语问" class="md-nav__link md-nav__link--active">
+      第五章 条件、循环及其他语问
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#print-import" title="print 和 import" class="md-nav__link">
+    print 和 import
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="打印多个参数" class="md-nav__link">
+    打印多个参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="导入时重命名" class="md-nav__link">
+    导入时重命名
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="赋值魔法" class="md-nav__link">
+    赋值魔法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="序列解包" class="md-nav__link">
+    序列解包
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="代码块" class="md-nav__link">
+    代码块
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="条件和条件语问" class="md-nav__link">
+    条件和条件语问
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="真值（布尔值）" class="md-nav__link">
+    真值（布尔值）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if" title="有条件地执行：if 语句" class="md-nav__link">
+    有条件地执行：if 语句
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#else" title="else 子句" class="md-nav__link">
+    else 子句
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elif" title="elif子句" class="md-nav__link">
+    elif子句
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="短路逻辑和条件表达式" class="md-nav__link">
+    短路逻辑和条件表达式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assert" title="断言：assert" class="md-nav__link">
+    断言：assert
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" title="循环" class="md-nav__link">
+    循环
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#while" title="while循环" class="md-nav__link">
+    while循环
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for" title="for循环" class="md-nav__link">
+    for循环
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="迭代字典" class="md-nav__link">
+    迭代字典
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="一些迭代工具" class="md-nav__link">
+    一些迭代工具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="跳出循环" class="md-nav__link">
+    跳出循环
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" title="简单推导" class="md-nav__link">
+    简单推导
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" title="列表推导" class="md-nav__link">
+    列表推导
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" title="并没有元组推导，使用()是创建生成器" class="md-nav__link">
+    并没有元组推导，使用()是创建生成器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="字典推导" class="md-nav__link">
+    字典推导
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pass-del-exec" title="pass, del, exec" class="md-nav__link">
+    pass, del, exec
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../第八章 异常/" title="第八章 异常" class="md-nav__link">
+      第八章 异常
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../第六章 函数/" title="第六章 函数" class="md-nav__link">
+      第六章 函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../第四章 字典/" title="第四章 字典" class="md-nav__link">
+      第四章 字典
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#print-import" title="print 和 import" class="md-nav__link">
+    print 和 import
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="打印多个参数" class="md-nav__link">
+    打印多个参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="导入时重命名" class="md-nav__link">
+    导入时重命名
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="赋值魔法" class="md-nav__link">
+    赋值魔法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="序列解包" class="md-nav__link">
+    序列解包
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="代码块" class="md-nav__link">
+    代码块
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="条件和条件语问" class="md-nav__link">
+    条件和条件语问
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="真值（布尔值）" class="md-nav__link">
+    真值（布尔值）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if" title="有条件地执行：if 语句" class="md-nav__link">
+    有条件地执行：if 语句
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#else" title="else 子句" class="md-nav__link">
+    else 子句
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elif" title="elif子句" class="md-nav__link">
+    elif子句
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="短路逻辑和条件表达式" class="md-nav__link">
+    短路逻辑和条件表达式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assert" title="断言：assert" class="md-nav__link">
+    断言：assert
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" title="循环" class="md-nav__link">
+    循环
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#while" title="while循环" class="md-nav__link">
+    while循环
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for" title="for循环" class="md-nav__link">
+    for循环
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="迭代字典" class="md-nav__link">
+    迭代字典
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="一些迭代工具" class="md-nav__link">
+    一些迭代工具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="跳出循环" class="md-nav__link">
+    跳出循环
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" title="简单推导" class="md-nav__link">
+    简单推导
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" title="列表推导" class="md-nav__link">
+    列表推导
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" title="并没有元组推导，使用()是创建生成器" class="md-nav__link">
+    并没有元组推导，使用()是创建生成器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="字典推导" class="md-nav__link">
+    字典推导
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pass-del-exec" title="pass, del, exec" class="md-nav__link">
+    pass, del, exec
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>第五章 条件、循环及其他语问</h1>
+                
+                <h3 id="print-import">print 和 import</h3>
+<h4 id="_1">打印多个参数</h4>
+<p><strong>print 可用于打印一个表达式，这个表达式要么是字符串，要么将自动转换为字符串</strong></p>
+<pre><code class="python">&gt;&gt;&gt; print('Age', 42)
+Age 42
+&gt;&gt;&gt; 
+&gt;&gt;&gt; name = 'Gumby'
+&gt;&gt;&gt; salutation = 'Mr.'
+&gt;&gt;&gt; greeting = 'Hello,'
+&gt;&gt;&gt; print(greeting, salutation, name)
+Hello, Mr. Gumby
+
+&gt;&gt;&gt; greeting  = 'Hello'
+&gt;&gt;&gt; print(greeting + ',', salutation, name)     #当变量不包含','时，采用 + 运算符相连
+Hello, Mr. Gumby
+
+#可自定义分隔符，缺省为空格
+&gt;&gt;&gt; print('I', 'wish', 'to', 'register', 'a', 'complaint')
+I wish to register a complaint
+&gt;&gt;&gt; print('I', 'wish', 'to', 'register', 'a', 'complaint', sep = '_')
+I_wish_to_register_a_complaint
+
+#可自定义结束字符串，缺省为换行符
+&gt;&gt;&gt; print('Hello,'); print('world!')
+Hello,
+world!
+&gt;&gt;&gt; print('Hello,', end = ''); print('world!')
+Hello,world!
+</code></pre>
+
+<h4 id="_2">导入时重命名</h4>
+<pre><code class="python">import somemodule
+from somemodule import somefunction
+from somemodule import somefunction, anotherfunction, yetanotherfunction
+from somemodule import *
+
+#可以对导入模块进行重命名、也可以对导入函数
+&gt;&gt;&gt; import math as foobar
+&gt;&gt;&gt; foobar.sqrt(4)
+2.0
+&gt;&gt;&gt; from math import sqrt as foobar
+&gt;&gt;&gt; foobar(4)
+2.0
+
+#一个模块可以位于另一个模块中
+</code></pre>
+
+<h3 id="_3">赋值魔法</h3>
+<h4 id="_4">序列解包</h4>
+<pre><code class="python">#序列解包(或可迭代对象解包): 将一个序列（或任何可迭代对象）解包，并将得到的值存储到一系列变量中
+&gt;&gt;&gt; x, y, z = 1, 2, 3       #注意，右侧是元组
+&gt;&gt;&gt; print(x, y, z)
+1 2 3
+&gt;&gt;&gt; 
+&gt;&gt;&gt; x, y = y, x
+&gt;&gt;&gt; print(x, y, z)
+2 1 3
+
+#要解包的序列包含的元素个数必须与在等号左边列出的目标个数相同，否则python将引发异常
+&gt;&gt;&gt; x, y, z = 1, 2
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+ValueError: not enough values to unpack (expected 3, got 2)
+&gt;&gt;&gt; x, y, z = 1, 2, 3, 4
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+ValueError: too many values to unpack (expected 3)
+
+#可使用星号运算符(*)来收集多余的值，这样无需确保和变量的个数相同
+&gt;&gt;&gt; a, b, *rest = [1, 2, 3,4]
+&gt;&gt;&gt; rest
+[3, 4]
+&gt;&gt;&gt; 
+&gt;&gt;&gt; name = 'Albus Percival Wulfric Brian Dumbledore'
+&gt;&gt;&gt; first, *middle, last = name.split()
+&gt;&gt;&gt; middle
+['Percival', 'Wulfric', 'Brian']
+
+#注意，带星号的变量最终包含的总是一个列表
+&gt;&gt;&gt; a, *b, c = 'abc'
+&gt;&gt;&gt; a, b, c
+('a', ['b'], 'c')
+</code></pre>
+
+<p><code>待补充：链式赋值、增强赋值</code></p>
+<h3 id="_5">代码块</h3>
+<p><em>代码块是一组语句，通过<code>缩进</code>代码（即在前面加空格）来创建。在同一个代码块中，各行代码的缩进量必须相同</em></p>
+<p>在Python中，使用<code>冒号(:)</code>指出接下来是一个代码块，并将该代码块中的每行代码都缩进相同的程度</p>
+<h3 id="_6">条件和条件语问</h3>
+<h4 id="_7">真值（布尔值）</h4>
+<p>标准值False和None、各种类型（包括浮点数、复数等）的数值0、空序列（如空字符串、空元组和空列表）以及空映射（如空字典）都被视为假，而其他各种值被视为真，包括特殊值True</p>
+<pre><code class="python">#True 和 False 不过是 0 和 1 的别名
+&gt;&gt;&gt; True == 1
+True
+&gt;&gt;&gt; False == 0
+True
+&gt;&gt;&gt; True + False + 42
+43
+&gt;&gt;&gt; 1 is 1
+True
+&gt;&gt;&gt; True is 1
+False
+&gt;&gt;&gt; False is 0
+False
+</code></pre>
+
+<h4 id="if">有条件地执行：if 语句</h4>
+<h4 id="else">else 子句</h4>
+<pre><code class="python">#条件表达式
+&gt;&gt;&gt; name = 'Gumby'
+&gt;&gt;&gt; status = 'friend' if name.endswith('Gumby') else 'stranger'
+&gt;&gt;&gt; status
+'friend'
+&gt;&gt;&gt; name = 'Convex'
+&gt;&gt;&gt; status = 'friend' if name.endswith('Gumby') else 'stranger''
+&gt;&gt;&gt; status
+'stranger'
+</code></pre>
+
+<h4 id="elif">elif子句</h4>
+<h4 id="_8">短路逻辑和条件表达式</h4>
+<pre><code class="python">&gt;&gt;&gt; 2 or 3
+2
+&gt;&gt;&gt; 2 or True
+2
+&gt;&gt;&gt; 2 and 3
+3
+&gt;&gt;&gt; 2 and False
+False
+
+&gt;&gt;&gt; name = input('Please enter your name: ') or '&lt;unknown&gt;'
+Please enter your name: Convex
+&gt;&gt;&gt; name
+'Convex'
+&gt;&gt;&gt; name = input('Please enter your name: ') or '&lt;unknown&gt;'
+Please enter your name: 
+&gt;&gt;&gt; name
+'&lt;unknown&gt;'
+</code></pre>
+
+<h4 id="assert">断言：assert</h4>
+<pre><code class="python">&gt;&gt;&gt; age = 10
+&gt;&gt;&gt; assert 0 &lt; age &lt; 100
+&gt;&gt;&gt; age = -1
+&gt;&gt;&gt; assert 0 &lt; age &lt; 100
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+AssertionError
+&gt;&gt;&gt; assert 0 &lt; age &lt; 100, 'The age must be realistic'   #在条件后面添加一个字符串，对断言做出说明
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+AssertionError: The age must be realistic
+</code></pre>
+
+<h3 id="_9">循环</h3>
+<h4 id="while">while循环</h4>
+<pre><code class="python">&gt;&gt;&gt; x = 1
+&gt;&gt;&gt; while x &lt;= 100:
+...     print(x)
+...     x += 1
+... 
+1
+2
+3
+...         #省略4-99
+100
+</code></pre>
+
+<h4 id="for">for循环</h4>
+<pre><code class="python">&gt;&gt;&gt; words = ['this', 'is', 'an', 'ex', 'parrot']
+&gt;&gt;&gt; for word in words:
+...     print(word)
+... 
+this
+is
+an
+ex
+parrot
+
+#创建范围的内置函数
+&gt;&gt;&gt; range(0,10)
+range(0, 10)
+&gt;&gt;&gt; list(range(0, 10))
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+#上面while例子可用for实现，其代码要紧凑得多
+for number in range(1, 101):
+    print(number)
+#只要能够使用for循环，就不要使用while循环
+</code></pre>
+
+<h4 id="_10">迭代字典</h4>
+<pre><code class="python">#遍历字典的关键字
+&gt;&gt;&gt; d = {'x': 1, 'y': 2, 'z': 3}
+&gt;&gt;&gt; for key in d:
+...     print(key, 'corresponds to', d[key])
+... 
+x corresponds to 1
+y corresponds to 2
+z corresponds to 3
+
+#for可以使用序列解包
+&gt;&gt;&gt; for key, value in d.items():
+...     print(key, 'corresponds to', value)
+... 
+x corresponds to 1
+y corresponds to 2
+z corresponds to 3
+#字典的元素的排列顺序是不确定的。要让映射记住其项的插入顺序，可使用模块collections中的OrderedDict类
+</code></pre>
+
+<h4 id="_11">一些迭代工具</h4>
+<ol>
+<li>并行迭代</li>
+</ol>
+<p>```python</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>names = ['anne', 'beth', 'george', 'damon']
+ages = [12, 45, 32, 102]
+for i in range(len(names)):
+   ...     print(names[i], 'is', ages[i], 'years old')
+   ... 
+   anne is 12 years old
+   beth is 45 years old
+   george is 32 years old
+   damon is 102 years old</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>#使用内置函数zip实现
+   names = ['anne', 'beth', 'george', 'damon']
+   ages = [12, 45, 32, 102]
+   for name, age in zip(names, ages):       #注意，for和zip之前的表达式是元组
+    print(name, 'is', age, 'years old')</p>
+<p>#函数zip可用于“缝合”任意数量的序列，但当长度不同时，将在最短的序列用完后停止“缝合”</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>list(zip(range(5), range(100000000)))
+   [(0, 0), (1, 1), (2, 2), (3, 3), (4, 4)]
+   ```</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<ol>
+<li>迭代时获取索引</li>
+</ol>
+<p><code>python
+   #可能想替换一个字符串列表中所有包含子串'xxx'的字符串
+   for index, string in enumerate(strings):
+        if 'xxx' in string:
+            strings[index] = '[censored]'</code></p>
+<ol>
+<li>反向迭代和排序后再迭代</li>
+</ol>
+<p>```python</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>sorted([4, 3, 6, 8, 3])      #sorted返回一个列表
+   [3, 3, 4, 6, 8]
+sorted('Hello, world!')
+   [' ', '!', ',', 'H', 'd', 'e', 'l', 'l', 'l', 'o', 'o', 'r', 'w']
+reversed('Hello, world!')    #reversed返回一个可迭代对象
+   <reversed object at 0x7f5edcdf1a20>
+list(reversed('Hello, world!'))
+   ['!', 'd', 'l', 'r', 'o', 'w', ' ', ',', 'o', 'l', 'l', 'e', 'H']
+''.join(reversed('Hello, world!'))
+   '!dlrow ,olleH'
+   ```</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h4 id="_12">跳出循环</h4>
+<ol>
+<li>break</li>
+</ol>
+<p>```python
+   #要结束(跳出)循环，可使用break</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>from math import sqrt
+for n in range(99, 0, -1):           #range可以指定步长
+   ...     root = sqrt(n)
+   ...     if root == int(root):
+   ...             print(n)
+   ...             break
+   ... 
+   81
+   ```</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<ol>
+<li>continue</li>
+</ol>
+<p>```python
+   #语句continue结束当前迭代，并跳到下一次迭代开头
+   for x in seq:
+    if condition1: continue
+    if condition2: continue
+    if condition3: continue</p>
+<pre><code>do_something()
+do_something_else()
+do_another_thing()
+etc()
+</code></pre>
+<p>```</p>
+<ol>
+<li>while True/break成例</li>
+</ol>
+<p><code>python
+   while True:
+    word = input('Please enter a word: ')
+    if not word: break
+    print('The word was ', word)</code></p>
+<ol>
+<li>循环中的else子句</li>
+</ol>
+<p><code>python
+   #循环中的else子句，仅在没有调用break时才执行
+   from math import sqrt
+   for n in range(99, 81, -1):
+    root = sqrt(n)
+    if root == int(root):
+        print(n)
+        break
+   else:
+    print('Didn't find it!')</code></p>
+<h3 id="_13">简单推导</h3>
+<h4 id="_14">列表推导</h4>
+<pre><code class="python">&gt;&gt;&gt; girls = ['alice', 'bernice', 'clarice']
+&gt;&gt;&gt; boys = ['chris', 'arnold', 'bob']
+&gt;&gt;&gt; [b + '+' + g for b in boys for g in girls if b[0] == g[0]]  #注意，开头是表达式，其结果作为列表的元素
+['chris+clarice', 'arnold+alice', 'bob+bernice']
+
+
+&gt;&gt;&gt; girls = ['alice', 'bernice', 'clarice']
+&gt;&gt;&gt; boys = ['chris', 'arnold', 'bob']
+&gt;&gt;&gt; letterGirls = {}
+&gt;&gt;&gt; for girl in girls:
+...     letterGirls.setdefault(girl[0], []).append(girl)    #字典的setdefault方法返回的值实际是字典项的值原本，而非副本
+... 
+&gt;&gt;&gt; print([b + '+' + g for b in boys for g in letterGirls[b[0]]])
+['chris+clarice', 'arnold+alice', 'bob+bernice']
+</code></pre>
+
+<h4 id="_15">并没有元组推导，使用()是创建<code>生成器</code></h4>
+<h4 id="_16">字典推导</h4>
+<pre><code class="python">&gt;&gt;&gt; squares = {i: &quot;{} squared is {}&quot;.format(i, i**2) for i in range(10)}
+&gt;&gt;&gt; squares[8]
+'8 squared is 64'
+</code></pre>
+
+<h3 id="pass-del-exec">pass, del, exec</h3>
+<ol>
+<li>
+<p>pass 什么都不做，适合用作占位符</p>
+</li>
+<li>
+<p>del 只是删除变量或数据结构的成员，但不能用于删除值。甚至在Python中根本没有办法删除，只有在数值不再使用时，Python解释器会立即将其删除</p>
+</li>
+<li>
+<p>```python
+   #函数exec将字符串作为代码执行</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>exec('print("Hello, world!")')
+   Hello, world!
+exec(input('command: '))
+   command: print('Hello')
+   Hello</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ol>
+<p>#通过给exec传递第二个参数——字典，用作代码字符串的命名空间</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>from math import sqrt
+scope = {}
+exec('sqrt = 1', scope)
+sqrt(4)
+   2.0
+scope['sqrt']
+   1
+scope.keys()
+   dict_keys(['<strong>builtins</strong>', 'sqrt'])</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>#exec执行一系列Python语句，而eval计算用字符串表示的Python表达式（包括函数）的值，并返回结果</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>eval(input("Enter an arithmetic expression: "))
+   Enter an arithmetic expression: 6 + 18 * 2
+   42
+   #为避免eval执行函数影响全局变量，建议也提供单独命名字间
+   ```</p>
+</blockquote>
+</blockquote>
+</blockquote>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../第二章 列表和元组/" title="第二章 列表和元组" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                第二章 列表和元组
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../第八章 异常/" title="第八章 异常" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                第八章 异常
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.d9aa80ab.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+    
+  </body>
+</html>
