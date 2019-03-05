@@ -31,21 +31,21 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="/assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
     
     
       
-        <title>Convex's Blog</title>
+        <title>Introduction to Object Storage - Convex's Blog</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/application.982221ab.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
       
       
     
     
-      <script src="/assets/javascripts/modernizr.1f0bcf2b.js"></script>
+      <script src="../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
     
     
       
@@ -54,7 +54,7 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="/assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
     
@@ -75,12 +75,16 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#introduction-to-object-storage" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="/." title="Convex's Blog" class="md-header-nav__button md-logo">
+        <a href="../.." title="Convex's Blog" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -96,7 +100,7 @@
               Convex's Blog
             </span>
             <span class="md-header-nav__topic">
-              
+              Introduction to Object Storage
             </span>
           
         </div>
@@ -148,7 +152,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="/." title="Convex's Blog" class="md-nav__button md-logo">
+    <a href="../.." title="Convex's Blog" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
@@ -164,7 +168,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/." title="Home" class="md-nav__link">
+    <a href="../.." title="Home" class="md-nav__link">
       Home
     </a>
   </li>
@@ -195,7 +199,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/Openstack/Networking (neutron) concepts/" title="Networking (neutron) concepts" class="md-nav__link">
+    <a href="../Networking (neutron) concepts/" title="Networking (neutron) concepts" class="md-nav__link">
       Networking (neutron) concepts
     </a>
   </li>
@@ -207,7 +211,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/Openstack/Openstack Keystone/" title="Openstack Keystone" class="md-nav__link">
+    <a href="../Openstack Keystone/" title="Openstack Keystone" class="md-nav__link">
       Openstack Keystone
     </a>
   </li>
@@ -219,7 +223,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/Openstack/Identity service overview/" title="Identity service overview" class="md-nav__link">
+    <a href="../Identity service overview/" title="Identity service overview" class="md-nav__link">
       Identity service overview
     </a>
   </li>
@@ -236,7 +240,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/about/" title="About" class="md-nav__link">
+    <a href="../../about/" title="About" class="md-nav__link">
       About
     </a>
   </li>
@@ -249,12 +253,79 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-object-storage" title="Introduction to Object Storage" class="md-nav__link">
+    Introduction to Object Storage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="对象存储介绍" class="md-nav__link">
+    对象存储介绍
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
-
+                
+                
+                  <h1>Introduction to Object Storage</h1>
+                
+                <h2 id="introduction-to-object-storage">Introduction to Object Storage</h2>
+<p>OpenStack Object Storage (swift) is used for redundant, scalable data storage using clusters of standardized servers to store petabytes of accessible data. It is a long-term storage system for large amounts of static data which can be retrieved and updated. Object Storage uses a distributed architecture with no central point of control, providing greater scalability, redundancy, and permanence. Objects are written to multiple hardware devices, with the OpenStack software responsible for ensuring data replication and integrity across the cluster. Storage clusters scale horizontally by adding new nodes. Should a node fail, OpenStack works to replicate its content from other active nodes. Because OpenStack uses software logic to ensure data replication and distribution across different devices, inexpensive commodity hard drives and servers can be used in lieu of more expensive equipment.</p>
+<p>Object Storage is ideal for cost effective, scale-out storage. It provides a fully distributed, API-accessible storage platform that can be integrated directly into applications or used for backup, archiving, and data retention.</p>
+<h2 id="_1">对象存储介绍</h2>
+<p>Openstack对象存储(swift)被实现成冗余、可伸缩的数据存储，使用标准的服务器集群用于存放PB级的可访问数据。这是一个长期的存储系统，用于大量的静态数据能够被恢复和更新。对象存储使用没有控制中心的分布式架构，提供较大的扩展性、冗余性和持久化。对象被写到多个硬件设备，Openstack软件负责确保数据复制及完整访问集群。存储集群支持水平扩展通过添加新的节点。如果一个节点失败，Openstack将会从其它活动的节点复制它的内容。因为Openstack使用软件逻辑确保数据复制和分布式访问不同的设备，便宜的商品硬件驱动和服务器能被用于代替更昂贵的设备。</p>
+<p>对象存储是理想的具备成本效益、横向扩展的存储。它提供一个完全分布式的、API访问存储平台，能够直接集成入应用或用于备份、归档和数据保留。</p>
+<p>redundant [rɪ'dʌnd(ə)nt] adj.多余的，过剩的</p>
+<p>scalable ['skeɪləb(ə)l]  adj. 可伸缩的</p>
+<p>standardized ['stændə,daizd] adj. 标准的</p>
+<p>long term 长期的</p>
+<p>retrieved [ri'tri:vd] v. 恢复</p>
+<p>architecture ['ɑːkɪtektʃə] n.架构</p>
+<p>permanence ['pɜːmənəns] n. 持久;永久</p>
+<p>multiple ['mʌltɪpl] adj.多样的</p>
+<p>responsible [rɪ'spɒnsɪb(ə)l] adj.负责的</p>
+<p>integrity [ɪn'tegrɪtɪ] n. 完整</p>
+<p>commodity [kə'mɒdɪtɪ] n.商品</p>
+<p>drive [draɪv] n.驱动</p>
+<p>lieu [ljuː; luː]n. 代替</p>
+<p>equipment [ɪ'kwɪpm(ə)nt] n.设备</p>
+<p>ideal [aɪ'dɪəl; aɪ'diːəl] adj.理想的</p>
+<p>effective [ɪ'fektɪv] adj.有效的</p>
+<p>cost effective 有成本效益的；划算的</p>
+<p>fully ['fʊlɪ] adv.充分地</p>
+<p>retention [rɪ'tenʃ(ə)n] n.保留</p>
+                
+                  
+                
+              
               
                 
 
@@ -285,9 +356,9 @@
       
     </div>
     
-      <script src="/assets/javascripts/application.d9aa80ab.js"></script>
+      <script src="../../assets/javascripts/application.d9aa80ab.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"/"}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

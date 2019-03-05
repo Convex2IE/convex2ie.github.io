@@ -31,21 +31,21 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="/assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
     
     
       
-        <title>Convex's Blog</title>
+        <title>Cinder Installation Tutorial - Convex's Blog</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/application.982221ab.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
       
       
     
     
-      <script src="/assets/javascripts/modernizr.1f0bcf2b.js"></script>
+      <script src="../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
     
     
       
@@ -54,7 +54,7 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="/assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
     
@@ -75,12 +75,16 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#cinder-installation-tutorial" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="/." title="Convex's Blog" class="md-header-nav__button md-logo">
+        <a href="../.." title="Convex's Blog" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -96,7 +100,7 @@
               Convex's Blog
             </span>
             <span class="md-header-nav__topic">
-              
+              Cinder Installation Tutorial
             </span>
           
         </div>
@@ -148,7 +152,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="/." title="Convex's Blog" class="md-nav__button md-logo">
+    <a href="../.." title="Convex's Blog" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
@@ -164,7 +168,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/." title="Home" class="md-nav__link">
+    <a href="../.." title="Home" class="md-nav__link">
       Home
     </a>
   </li>
@@ -195,7 +199,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/Openstack/Networking (neutron) concepts/" title="Networking (neutron) concepts" class="md-nav__link">
+    <a href="../Networking (neutron) concepts/" title="Networking (neutron) concepts" class="md-nav__link">
       Networking (neutron) concepts
     </a>
   </li>
@@ -207,7 +211,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/Openstack/Openstack Keystone/" title="Openstack Keystone" class="md-nav__link">
+    <a href="../Openstack Keystone/" title="Openstack Keystone" class="md-nav__link">
       Openstack Keystone
     </a>
   </li>
@@ -219,7 +223,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/Openstack/Identity service overview/" title="Identity service overview" class="md-nav__link">
+    <a href="../Identity service overview/" title="Identity service overview" class="md-nav__link">
       Identity service overview
     </a>
   </li>
@@ -236,7 +240,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/about/" title="About" class="md-nav__link">
+    <a href="../../about/" title="About" class="md-nav__link">
       About
     </a>
   </li>
@@ -249,12 +253,68 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cinder-installation-tutorial" title="Cinder Installation Tutorial" class="md-nav__link">
+    Cinder Installation Tutorial
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cinder" title="Cinder 安装向导" class="md-nav__link">
+    Cinder 安装向导
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
-
+                
+                
+                  <h1>Cinder Installation Tutorial</h1>
+                
+                <h2 id="cinder-installation-tutorial">Cinder Installation Tutorial</h2>
+<p>The Block Storage service (cinder) provides block storage devices to guest instances. The method in which the storage is provisioned and consumed is determined by the Block Storage driver, or drivers in the case of a multi-backend configuration. There are a variety of drivers that are available: NAS/SAN, NFS, iSCSI, Ceph, and more.</p>
+<p>The Block Storage API and scheduler services typically run on the controller nodes. Depending upon the drivers used, the volume service can run on controller nodes, compute nodes, or standalone storage nodes.</p>
+<p>For more information, see the <a href="https://docs.openstack.org/ocata/config-reference/block-storage/volume-drivers.html">Configuration Reference</a>.</p>
+<h2 id="cinder">Cinder 安装向导</h2>
+<p>块存储服务(cinder)提供块存储设备给客户机。通过哪种方式提供或使用存储取决于块存储设备，或者在多后端配置的情况下由驱动决定。以下是有效的驱动:NAS/SAN,NFS,iSCSI,Ceph,或其它。</p>
+<p>块存储API和调度服务通常运行在控制节点。依赖使用的驱动，卷服务可以安装在控制节点、计算节点、或者单独的存储节点。</p>
+<p>更多的信息，见<a href="https://docs.openstack.org/ocata/config-reference/block-storage/volume-drivers.html">配置参考</a>。</p>
+<p>in which:在哪点上</p>
+<p>consume[kən'sjuːm] vt. vi. 消耗</p>
+<p>in the case of 在...情况下</p>
+<p>typically['tɪpɪkəlɪ] adv. 代表性地；作为特色地</p>
+<p>depend[dɪ'pend] vi.依赖,依靠;取决于;相信，依赖</p>
+<p>standalone['stændə,ləʊn] adj.单独的</p>
+                
+                  
+                
+              
               
                 
 
@@ -285,9 +345,9 @@
       
     </div>
     
-      <script src="/assets/javascripts/application.d9aa80ab.js"></script>
+      <script src="../../assets/javascripts/application.d9aa80ab.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"/"}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

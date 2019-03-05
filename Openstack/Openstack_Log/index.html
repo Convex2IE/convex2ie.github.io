@@ -31,21 +31,21 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="/assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
     
     
       
-        <title>Convex's Blog</title>
+        <title>Openstack_Log - Convex's Blog</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/application.982221ab.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
       
       
     
     
-      <script src="/assets/javascripts/modernizr.1f0bcf2b.js"></script>
+      <script src="../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
     
     
       
@@ -54,7 +54,7 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="/assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
     
@@ -75,12 +75,16 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#openstack_log" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="/." title="Convex's Blog" class="md-header-nav__button md-logo">
+        <a href="../.." title="Convex's Blog" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -96,7 +100,7 @@
               Convex's Blog
             </span>
             <span class="md-header-nav__topic">
-              
+              Openstack_Log
             </span>
           
         </div>
@@ -148,7 +152,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="/." title="Convex's Blog" class="md-nav__button md-logo">
+    <a href="../.." title="Convex's Blog" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
@@ -164,7 +168,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/." title="Home" class="md-nav__link">
+    <a href="../.." title="Home" class="md-nav__link">
       Home
     </a>
   </li>
@@ -195,7 +199,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/Openstack/Networking (neutron) concepts/" title="Networking (neutron) concepts" class="md-nav__link">
+    <a href="../Networking (neutron) concepts/" title="Networking (neutron) concepts" class="md-nav__link">
       Networking (neutron) concepts
     </a>
   </li>
@@ -207,7 +211,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/Openstack/Openstack Keystone/" title="Openstack Keystone" class="md-nav__link">
+    <a href="../Openstack Keystone/" title="Openstack Keystone" class="md-nav__link">
       Openstack Keystone
     </a>
   </li>
@@ -219,7 +223,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/Openstack/Identity service overview/" title="Identity service overview" class="md-nav__link">
+    <a href="../Identity service overview/" title="Identity service overview" class="md-nav__link">
       Identity service overview
     </a>
   </li>
@@ -236,7 +240,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/about/" title="About" class="md-nav__link">
+    <a href="../../about/" title="About" class="md-nav__link">
       About
     </a>
   </li>
@@ -249,12 +253,72 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="日志格式" class="md-nav__link">
+    日志格式
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
-
+                
+                
+                <h1 id="openstack_log">Openstack_Log</h1>
+<h3 id="_1">日志格式</h3>
+<p>Openstack 的日志格式都是统一的，如下</p>
+<table>
+<thead>
+<tr>
+<th align="center">&lt;时间戳&gt;</th>
+<th align="center">&lt;日志等级&gt;</th>
+<th align="center">&lt;代码模块&gt;</th>
+<th align="center"><Request ID></th>
+<th align="center">&lt;日志内容&gt;</th>
+<th align="center">&lt;源代码位置&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">日志记录的时间，包括 年 月 日 时 分 秒 毫秒</td>
+<td align="center">有INFO WARNING ERROR DEBUG 等</td>
+<td align="center">当前运行的模块</td>
+<td align="center">日志会记录连续不同的操作，为了便于区分和增加可读性，每个操作都被分配唯一的Request ID，便于查找</td>
+<td align="center">这是日志的主体，记录当前正在执行的操作和结果等重要信息</td>
+<td align="center">日志代码的位置，包括方法名称，源代码文件的目录位置和行号。这一项不是所有日志都有</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+              
               
                 
 
@@ -285,9 +349,9 @@
       
     </div>
     
-      <script src="/assets/javascripts/application.d9aa80ab.js"></script>
+      <script src="../../assets/javascripts/application.d9aa80ab.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"/"}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

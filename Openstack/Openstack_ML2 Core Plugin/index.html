@@ -31,21 +31,21 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="/assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
     
     
       
-        <title>Convex's Blog</title>
+        <title>Openstack ML2 Core Plugin - Convex's Blog</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/application.982221ab.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
       
       
     
     
-      <script src="/assets/javascripts/modernizr.1f0bcf2b.js"></script>
+      <script src="../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
     
     
       
@@ -54,7 +54,7 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="/assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
     
@@ -75,12 +75,16 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#openstack_ml2-core-plugin" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="/." title="Convex's Blog" class="md-header-nav__button md-logo">
+        <a href="../.." title="Convex's Blog" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -96,7 +100,7 @@
               Convex's Blog
             </span>
             <span class="md-header-nav__topic">
-              
+              Openstack ML2 Core Plugin
             </span>
           
         </div>
@@ -148,7 +152,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="/." title="Convex's Blog" class="md-nav__button md-logo">
+    <a href="../.." title="Convex's Blog" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
@@ -164,7 +168,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/." title="Home" class="md-nav__link">
+    <a href="../.." title="Home" class="md-nav__link">
       Home
     </a>
   </li>
@@ -195,7 +199,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/Openstack/Networking (neutron) concepts/" title="Networking (neutron) concepts" class="md-nav__link">
+    <a href="../Networking (neutron) concepts/" title="Networking (neutron) concepts" class="md-nav__link">
       Networking (neutron) concepts
     </a>
   </li>
@@ -207,7 +211,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/Openstack/Openstack Keystone/" title="Openstack Keystone" class="md-nav__link">
+    <a href="../Openstack Keystone/" title="Openstack Keystone" class="md-nav__link">
       Openstack Keystone
     </a>
   </li>
@@ -219,7 +223,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/Openstack/Identity service overview/" title="Identity service overview" class="md-nav__link">
+    <a href="../Identity service overview/" title="Identity service overview" class="md-nav__link">
       Identity service overview
     </a>
   </li>
@@ -236,7 +240,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/about/" title="About" class="md-nav__link">
+    <a href="../../about/" title="About" class="md-nav__link">
       About
     </a>
   </li>
@@ -249,12 +253,76 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#openstack_ml2-core-plugin" title="Openstack_ML2 Core Plugin" class="md-nav__link">
+    Openstack_ML2 Core Plugin
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what" title="What" class="md-nav__link">
+    What
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why" title="Why" class="md-nav__link">
+    Why
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
-
+                
+                
+                  <h1>Openstack ML2 Core Plugin</h1>
+                
+                <h2 id="openstack_ml2-core-plugin">Openstack_ML2 Core Plugin</h2>
+<h4 id="what">What</h4>
+<p>Moduler Layer 2 (ML2) 是 Neutron 在 Havana 版本实同一个新的 core plugin，用于替代原有的 linux bridge plugin 和 openstack vswitch plugin</p>
+<h4 id="why">Why</h4>
+<p>传统 core plugin 的问题：</p>
+<ol>
+<li>无法同时使用多种 network provider</li>
+</ol>
+<p>​</p>
+                
+                  
+                
+              
               
                 
 
@@ -285,9 +353,9 @@
       
     </div>
     
-      <script src="/assets/javascripts/application.d9aa80ab.js"></script>
+      <script src="../../assets/javascripts/application.d9aa80ab.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"/"}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>
